@@ -1,4 +1,4 @@
-#N canvas 28 26 1912 994 12;
+#N canvas 6 59 1908 965 12;
 #X obj 217 661 dac~ 1 2;
 #X obj 172 40 adc~ 1;
 #N canvas 0 26 1920 1028 filterbank 0;
@@ -260,40 +260,40 @@
 #X connect 137 0 139 0;
 #X coords 0 -1 1 1 504 284 1 162 236;
 #X restore 172 80 pd filterbank;
-#N canvas 4 49 1912 1019 delay-lines 0;
+#N canvas 6 59 1908 965 delay-lines 0;
 #X obj 380 500 outlet~;
 #X obj 92 132 r \$0-b1-del;
 #X obj 92 161 sig~;
 #X obj 221 161 sig~;
 #X obj 221 132 r \$0-b2-del;
 #X obj 960 -10 vsl 15 128 0 1500 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 0 1;
+#000000 #000000 2447 1;
 #X obj 960 210 s \$0-b1-del;
 #X obj 1001 -10 vsl 15 128 0 1500 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 3800 1;
+#000000 #000000 1693 1;
 #X obj 1001 185 s \$0-b2-del;
 #X obj 1041 -10 vsl 15 128 0 1500 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 3600 1;
+#000000 #000000 1640 1;
 #X obj 1082 -10 vsl 15 128 0 1500 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 7100 1;
+#000000 #000000 4887 1;
 #X obj 1041 162 s \$0-b3-del;
 #X obj 1082 211 s \$0-b4-del;
 #X obj 1123 -10 vsl 15 128 0 1500 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 1400 1;
+#000000 #000000 4333 1;
 #X obj 1165 -10 vsl 15 128 0 1500 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 0 1;
+#000000 #000000 5380 1;
 #X obj 1206 -10 vsl 15 128 0 1500 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 0 1;
+#000000 #000000 6427 1;
 #X obj 1246 -10 vsl 15 128 0 1500 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 0 1;
+#000000 #000000 6973 1;
 #X obj 1123 185 s \$0-b5-del;
 #X obj 1246 185 s \$0-b8-del;
 #X obj 1206 211 s \$0-b7-del;
 #X obj 1165 162 s \$0-b6-del;
 #X obj 1287 -9 vsl 15 128 0 1500 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 0 1;
+#000000 #000000 7820 1;
 #X obj 1328 -9 vsl 15 128 0 1500 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 1300 1;
+#000000 #000000 6767 1;
 #X obj 1287 163 s \$0-b9-del;
 #X obj 1328 212 s \$0-b10-del;
 #X obj 1371 33 bng 19 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
@@ -394,6 +394,13 @@
 #X obj 612 285 r \$0-b10-del;
 #X obj 612 345 vd~ \$0-buffer-b10;
 #X obj 630 381 r \$0-b10-gain;
+#X msg 1120 400 \; \$0-b1-del__ 100 \; \$0-b2-del__ 200 \; \$0-b3-del__
+300 \; \$0-b4-del__ 400 \; \$0-b5-del__ 500 \; \$0-b6-del__ 600 \;
+\$0-b7-del__ 700 \; \$0-b8-del__ 800 \; \$0-b9-del__ 900 \; \$0-b10-del__
+1000;
+#X obj 1371 80 bng 19 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 1392 80 preset 3;
 #X connect 1 0 2 0;
 #X connect 2 0 49 0;
 #X connect 3 0 50 0;
@@ -478,6 +485,7 @@
 #X connect 109 0 86 0;
 #X connect 110 0 87 0;
 #X connect 111 0 87 1;
+#X connect 113 0 112 0;
 #X coords 0 -1 1 1 548 210 1 922 -50;
 #X restore 240 410 pd delay-lines;
 #X connect 1 0 2 0;
